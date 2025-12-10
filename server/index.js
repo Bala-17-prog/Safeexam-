@@ -32,7 +32,5 @@ app.use("/api/questions", questionRoute);
 app.use("/api/results", resultRoute);
 app.use("/api/users", userRoute); // <--- AND THIS LINE IS HERE
 
-const PORT = 5000;
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-});
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.log(`Server running on port ${port}`));
